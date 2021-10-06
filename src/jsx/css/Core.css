@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Manrope;
+  src: url('../../media/fonts/manrope/Manrope[wght].ttf') 
+}
+
+:root {
+  --white: rgb(242, 233, 228);
+  --black: #2b2d42;
+  --transparent: rgba(0, 0, 0, 0);
+}
+
+body {
+  background-image: url("../../media/img/bckg.jpg");
+  background-position: center;
+  color: var(--black);
+}
+
+.Nav {
+  padding-top: 0.75%;
+  font-family: Manrope, sans-serif;
+  background-color: var(--transparent);
+  padding-bottom: 0.25%;
+  width: 100%;
+}
+
+.Nav-Menu {
+  background-color: var(--transparent);
+  width: 15%;
+  max-height: 100%;
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+
+#nav:checked ~ .Nav-Menu {
+  max-height: 100%;
+  visibility: visible;
+}
+
+.Nav-Name {
+  margin-left: 1.5%;
+  font-size: x-large;
+  font-weight: 750;
+  display: inline-block;
+}
+
+.Nav-Text {
+  margin-left: 2%;
+  font-size: x-large;
+  font-weight: 650;
+  display: inline-block;
+  visibility: inherit;
+}
