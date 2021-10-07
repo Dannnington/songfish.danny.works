@@ -4,15 +4,32 @@
 }
 
 :root {
-  --white: rgb(242, 233, 228);
+  --white: #CCCCCC;
+  --oldwhite: rgb(242, 233, 228);
+  --link: rgb(170, 161, 155);
   --black: #2b2d42;
+  --blue: #0064fd;
   --transparent: rgba(0, 0, 0, 0);
 }
 
 body {
-  background-image: url("../../media/img/bckg.jpg");
+  color: var(--white);
+  background-color: var(--black);
+  font-family: Manrope, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.bgImage {
+  z-index: -5;
+  background-image: url("../../media/img/aqua_bkg2.jpg");
   background-position: center;
-  color: var(--black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(0);
+  height: 100%;
+  width: 100%;
+  position: fixed;
 }
 
 .Nav {
@@ -23,32 +40,40 @@ body {
   width: 100%;
 }
 
-.Nav-Menu {
-  background-color: var(--transparent);
-  width: 15%;
-  max-height: 100%;
-  display: block;
-  visibility: hidden;
-  overflow: hidden;
-}
-
-
-#nav:checked ~ .Nav-Menu {
-  max-height: 100%;
-  visibility: visible;
-}
-
 .Nav-Name {
   margin-left: 1.5%;
-  font-size: x-large;
+  font-size: 150%;
   font-weight: 750;
   display: inline-block;
 }
 
 .Nav-Text {
-  margin-left: 2%;
-  font-size: x-large;
-  font-weight: 650;
+  margin-left: 1.5%;
+  font-size: 125%;
+  font-weight: 700;
   display: inline-block;
-  visibility: inherit;
+}
+
+.Footer {
+  font-size: 100%;
+  font-weight: 750;
+  margin-bottom: 2.5%;
+}
+
+.Page-Body {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  margin-top: 5%;
+  position: sticky;
+}
+
+@media only screen and (max-width: 768px) {
+  .Nav-Name {
+      visibility: hidden;
+  }
+
+  .Nav-Text {
+    visibility: hidden;
+  }
 }

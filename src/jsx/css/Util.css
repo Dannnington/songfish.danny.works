@@ -1,0 +1,31 @@
+.Util-Centre-Contain {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.Util-Centre-Contain-Column {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+
+.Util-Footer {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    width: 100vw;
+    text-align: center;
+    color: var(--white);
+}
